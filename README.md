@@ -289,17 +289,9 @@ private static final String BASE_URL = "http://10.0.0.2:8080/"; // Real device
 
 ## � Ảnh Màn Hình
 
-### Trang Chủ & Danh Sách Sản Phẩm
-![Screenshot 1](1.png)
-
-### Chi Tiết Sản Phẩm & Đánh Giá
-![Screenshot 2](2.png)
-
-### Giỏ Hàng & Thanh Toán
-![Screenshot 3](3.png)
-
-### Hồ Sơ & Vouchers
-![Screenshot 4](4.png)
+| Trang Chủ | Chi Tiết Sản Phẩm | Giỏ Hàng | Hồ Sơ |
+|:---:|:---:|:---:|:---:|
+| ![Screenshot 1](1.png) | ![Screenshot 2](2.png) | ![Screenshot 3](3.png) | ![Screenshot 4](4.png) |
 
 ## �🐛 Gỡ Lỗi
 
