@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="192dp"
+    android:height="192dp"
+    android:viewportWidth="192"
+    android:viewportHeight="192">
+
+    <!-- Background circle -->
+    <path
+        android:fillColor="#FF6B35"
+        android:pathData="M96,96 m-96,0 a96,96 0 1,0 192,0 a96,96 0 1,0 -192,0" />
+
+    <!-- Phone icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M80,30 L112,30 C115.3,30 118,32.7 118,36 L118,156 C118,159.3 115.3,162 112,162 L80,162 C76.7,162 74,159.3 74,156 L74,36 C74,32.7 76.7,30 80,30 Z" />
+
+    <!-- Phone screen -->
+    <path
+        android:fillColor="#212121"
+        android:pathData="M80,40 L112,40 L112,145 L80,145 Z" />
+
+    <!-- Screen notification dots -->
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M85,50 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M96,50 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+    <path
+        android:fillColor="#FF9800"
+        android:pathData="M107,50 m-2,0 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+
+    <!-- Home button -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M96,155 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+
+</vector>
