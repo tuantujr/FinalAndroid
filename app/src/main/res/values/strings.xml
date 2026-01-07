@@ -1,0 +1,216 @@
+<resources>
+    <!-- App Name -->
+    <string name="app_name">UTE Phone Hub</string>
+    <string name="app_tagline">Cửa hàng điện thoại, laptop và phụ kiện chính hãng với giá tốt nhất!</string>
+    
+    <!-- Navigation -->
+    <string name="nav_home">Trang chủ</string>
+    <string name="nav_categories">Danh mục</string>
+    <string name="nav_cart">Giỏ hàng</string>
+    <string name="nav_profile">Tài khoản</string>
+    <string name="nav_favorites">Yêu thích</string>
+    
+    <!-- Auth -->
+    <string name="login">Đăng nhập</string>
+    <string name="register">Đăng ký</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="please_login">Vui lòng đăng nhập để tiếp tục</string>
+    <string name="welcome_back">Xin chào!</string>
+    <string name="welcome_register">Chào mừng trở lại!</string>
+    <string name="no_account">Chưa có tài khoản?</string>
+    <string name="have_account">Đã có tài khoản?</string>
+    <string name="forgot_password">Quên mật khẩu?</string>
+    <string name="or_login_with">hoặc đăng nhập với</string>
+    <string name="or_register_with">hoặc đăng ký với</string>
+    <string name="back_to_home">Về trang chủ</string>
+    
+    <!-- Form Fields -->
+    <string name="username">Tên đăng nhập</string>
+    <string name="username_or_email">Tên đăng nhập hoặc email</string>
+    <string name="full_name">Họ và tên</string>
+    <string name="email">Email</string>
+    <string name="password">Mật khẩu</string>
+    <string name="confirm_password">Xác nhận mật khẩu</string>
+    <string name="phone_number">Số điện thoại</string>
+    <string name="address">Địa chỉ</string>
+    <string name="city">Tỉnh/Thành phố</string>
+    <string name="district">Quận/Huyện</string>
+    <string name="ward">Phường/Xã</string>
+    <string name="street_address">Địa chỉ chi tiết</string>
+    
+    <!-- Validation -->
+    <string name="field_required">Trường này là bắt buộc</string>
+    <string name="invalid_email">Email không hợp lệ</string>
+    <string name="password_too_short">Mật khẩu phải có ít nhất 6 ký tự</string>
+    <string name="password_not_match">Mật khẩu không khớp</string>
+    <string name="invalid_phone">Số điện thoại không hợp lệ</string>
+    
+    <!-- Home -->
+    <string name="search_hint">Tìm kiếm điện thoại, laptop, phụ kiện</string>
+    <string name="welcome_message">Chào mừng đến với UTE Phone Hub</string>
+    <string name="shop_now">Mua sắm ngay</string>
+    <string name="online_promotions">Khuyến mãi online</string>
+    <string name="flash_sale">FLASH SALE</string>
+    <string name="flash_sale_desc">GIÁ SỐC</string>
+    <string name="online_only">ONLINE ONLY</string>
+    <string name="online_only_desc">GIẢM ĐẾN 50%</string>
+    <string name="featured_products">Sản phẩm nổi bật</string>
+    <string name="view_all">Xem tất cả</string>
+    <string name="countdown_label">Còn lại</string>
+    <string name="ending_soon">Sắp diễn ra 21:30</string>
+    <string name="tomorrow_9am">Ngày mai 09:00</string>
+    <string name="tomorrow_12pm">Ngày mai 12:00</string>
+    <string name="tomorrow_3pm">Ngày mai 15:00</string>
+    
+    <!-- Categories -->
+    <string name="category_phone">Điện thoại</string>
+    <string name="category_laptop">Laptop</string>
+    <string name="category_accessory">Phụ kiện</string>
+    <string name="category_smartwatch">Smartwatch</string>
+    <string name="category_tablet">Tablet</string>
+    <string name="category_used">Máy cũ</string>
+    <string name="category_monitor">Màn hình</string>
+    
+    <!-- Product -->
+    <string name="add_to_cart">Thêm vào giỏ</string>
+    <string name="buy_now">Mua ngay</string>
+    <string name="out_of_stock">Hết hàng</string>
+    <string name="in_stock">Còn hàng</string>
+    <string name="stock_remaining">Còn %d sản phẩm</string>
+    <string name="price_format">%s ₫</string>
+    <string name="product_description">Mô tả sản phẩm</string>
+    <string name="specifications">Thông số kỹ thuật</string>
+    <string name="reviews">Đánh giá</string>
+    <string name="reviews_count">(%d đánh giá)</string>
+    <string name="write_review">Viết đánh giá</string>
+    <string name="similar_products">Sản phẩm tương tự</string>
+    
+    <!-- Cart -->
+    <string name="cart_title">Giỏ hàng</string>
+    <string name="cart_empty">Giỏ hàng trống</string>
+    <string name="cart_empty_desc">Hãy thêm sản phẩm vào giỏ hàng</string>
+    <string name="continue_shopping">Tiếp tục mua sắm</string>
+    <string name="subtotal">Tạm tính</string>
+    <string name="discount">Giảm giá</string>
+    <string name="shipping_fee">Phí vận chuyển</string>
+    <string name="total">Tổng cộng</string>
+    <string name="checkout">Thanh toán</string>
+    <string name="apply_voucher">Áp dụng mã giảm giá</string>
+    <string name="voucher_code">Mã giảm giá</string>
+    <string name="apply">Áp dụng</string>
+    <string name="remove">Xóa</string>
+    <string name="quantity">Số lượng</string>
+    
+    <!-- Order -->
+    <string name="order_title">Đặt hàng</string>
+    <string name="shipping_info">Thông tin giao hàng</string>
+    <string name="payment_method">Phương thức thanh toán</string>
+    <string name="payment_cod">Thanh toán khi nhận hàng (COD)</string>
+    <string name="payment_bank">Chuyển khoản ngân hàng</string>
+    <string name="payment_store">Nhận tại cửa hàng</string>
+    <string name="place_order">Đặt hàng</string>
+    <string name="order_success">Đặt hàng thành công!</string>
+    <string name="order_code">Mã đơn hàng: %s</string>
+    <string name="order_history">Lịch sử đơn hàng</string>
+    <string name="order_detail">Chi tiết đơn hàng</string>
+    <string name="order_status">Trạng thái</string>
+    <string name="order_tracking">Tra cứu đơn hàng</string>
+    
+    <!-- Order Status -->
+    <string name="status_pending">Chờ xác nhận</string>
+    <string name="status_processing">Đang xử lý</string>
+    <string name="status_shipped">Đang giao hàng</string>
+    <string name="status_delivered">Đã giao hàng</string>
+    <string name="status_cancelled">Đã hủy</string>
+    
+    <!-- Profile -->
+    <string name="profile_title">Tài khoản</string>
+    <string name="edit_profile">Chỉnh sửa thông tin</string>
+    <string name="change_password">Đổi mật khẩu</string>
+    <string name="my_addresses">Địa chỉ của tôi</string>
+    <string name="my_orders">Đơn hàng của tôi</string>
+    <string name="my_reviews">Đánh giá của tôi</string>
+    <string name="settings">Cài đặt</string>
+    <string name="help">Trợ giúp</string>
+    <string name="about">Về chúng tôi</string>
+    <string name="guest_user">Khách</string>
+    <string name="login_to_continue">Đăng nhập để tiếp tục</string>
+    
+    <!-- Common Actions -->
+    <string name="save">Lưu</string>
+    <string name="cancel">Hủy</string>
+    <string name="confirm">Xác nhận</string>
+    <string name="close">Đóng</string>
+    <string name="retry">Thử lại</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="filter">Lọc</string>
+    <string name="sort">Sắp xếp</string>
+    <string name="clear">Xóa</string>
+    <string name="select">Chọn</string>
+    <string name="delete">Xóa</string>
+    <string name="edit">Sửa</string>
+    <string name="back">Quay lại</string>
+    <string name="loading">Đang tải...</string>
+    <string name="register_success">Đăng ký thành công! Vui lòng đăng nhập.</string>
+    <string name="login_success">Đăng nhập thành công!</string>
+    <string name="add">Thêm</string>
+    
+    <!-- Sort Options -->
+    <string name="sort_newest">Mới nhất</string>
+    <string name="sort_price_low">Giá thấp đến cao</string>
+    <string name="sort_price_high">Giá cao đến thấp</string>
+    <string name="sort_popular">Phổ biến nhất</string>
+    <string name="sort_rating">Đánh giá cao nhất</string>
+    
+    <!-- Messages -->
+    <string name="error_occurred">Đã xảy ra lỗi</string>
+    <string name="no_internet">Không có kết nối internet</string>
+    <string name="try_again">Thử lại</string>
+    <string name="success">Thành công</string>
+    <string name="added_to_cart">Đã thêm vào giỏ hàng</string>
+    <string name="removed_from_cart">Đã xóa khỏi giỏ hàng</string>
+    <string name="logout_confirm">Bạn có chắc muốn đăng xuất?</string>
+    <string name="delete_confirm">Bạn có chắc muốn xóa?</string>
+    <string name="no_products">Không có sản phẩm</string>
+    <string name="no_orders">Chưa có đơn hàng</string>
+    <string name="no_reviews">Chưa có đánh giá</string>
+    
+    <!-- Footer Info -->
+    <string name="hotline">Hotline: 1900 xxxx</string>
+    <string name="email_support">Email: support@utephonehub.com</string>
+    <string name="store_address">Địa chỉ: ĐH Sư phạm Kỹ thuật TP.HCM</string>
+    
+    <!-- Missing Strings -->
+    <string name="reset_password">Đặt lại mật khẩu</string>
+    <string name="forgot_password_desc">Nhập email của bạn và chúng tôi sẽ gửi link đặt lại mật khẩu</string>
+    <string name="send_reset_link">Gửi link đặt lại</string>
+    <string name="back_to_login">Quay lại đăng nhập</string>
+    <string name="description">Mô tả</string>
+    <string name="search_history">Lịch sử tìm kiếm</string>
+    <string name="clear_all">Xóa tất cả</string>
+    <string name="popular_searches">Tìm kiếm phổ biến</string>
+    <string name="no_results">Không tìm thấy kết quả</string>
+    <string name="try_different_keywords">Thử tìm kiếm với từ khóa khác</string>
+    <string name="guest">Khách</string>
+    <string name="explore">Khám phá</string>
+    <string name="favorites">Yêu thích</string>
+    <string name="addresses">Địa chỉ</string>
+    <string name="support">Hỗ trợ</string>
+    <string name="account_settings">Cài đặt tài khoản</string>
+    <string name="app_version">Phiên bản 1.0.0</string>
+    
+    <!-- Additional Missing Strings -->
+    <string name="free_shipping">Miễn phí</string>
+    <string name="order_items">Sản phẩm đặt hàng</string>
+    <string name="current_password">Mật khẩu hiện tại</string>
+    <string name="new_password">Mật khẩu mới</string>
+    <string name="enter_order_code">Nhập mã đơn hàng để tra cứu</string>
+    <string name="order_code_hint">Mã đơn hàng</string>
+    <string name="track_order">Tra cứu</string>
+    
+    <!-- Favorites Strings -->
+    <string name="no_favorites">Chưa có sản phẩm yêu thích</string>
+    <string name="favorites_hint">Thêm sản phẩm vào danh sách yêu thích để xem lại sau</string>
+    <string name="browse_products">Xem sản phẩm</string>
+    <string name="no_products_found">Không tìm thấy sản phẩm</string>
+</resources>

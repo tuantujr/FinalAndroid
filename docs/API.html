@@ -1,0 +1,1053 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Phiên bản: 1.0</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="286996bd-0744-80a1-b6bc-c9950a8960f6" class="page sans"><header><h1 class="page-title"><strong>Phiên bản:</strong> 1.0</h1><p class="page-description"></p><table class="properties"><tbody></tbody></table></header><div class="page-body"><h3 id="ebe709e7-d37b-4173-8f46-d3233737050c" class=""><strong>Phiên bản:</strong> 1.0</h3><p id="fe69de34-18ac-415b-bf5a-e3bdef56fb48" class=""><strong>Base URL:</strong> <code>/api/v1</code></p><p id="91270b26-ca20-4f4e-af40-2bea00ea3476" class=""><strong>Quy ước chung:</strong></p><ul id="cb178eac-e51c-4da5-9689-802ed5e4d5d0" class="bulleted-list"><li style="list-style-type:disc"><strong>Định dạng:</strong> Tất cả request và response body đều sử dụng <code>JSON</code>.</li></ul><ul id="5c9a9ee3-df31-4d30-a0d0-221963e13995" class="bulleted-list"><li style="list-style-type:disc"><strong>Cấu trúc Response thành công:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2a3e69fc-d9ce-46de-92e8-46c579d2fc26" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Thông báo thành công.&quot;,
+  &quot;data&quot;: { ... } or [ ... ]
+}
+
+
+</code></pre></li></ul><ul id="d0c48730-4479-4d9b-a56b-397d038443b4" class="bulleted-list"><li style="list-style-type:disc"><strong>Cấu trúc Response lỗi:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2e2eed89-b1fb-419f-b66b-405ba2e68b1a" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: false,
+  &quot;message&quot;: &quot;Thông báo lỗi.&quot;,
+  &quot;errors&quot;: [ { &quot;field&quot;: &quot;ten_truong&quot;, &quot;message&quot;: &quot;chi_tiet_loi&quot; } ]
+}
+
+
+</code></pre></li></ul><ul id="3d0293c3-93b5-4619-b260-c4757204acc1" class="bulleted-list"><li style="list-style-type:disc"><strong>Xác thực:</strong> Các endpoint yêu cầu xác thực phải được gửi kèm header: <code>Authorization: Bearer &lt;accessToken&gt;</code>.</li></ul><hr id="cfdb06cd-e3b4-49f2-9e6e-3d16dae62571"/><h3 id="fe5fc7f6-cbf4-4d93-a63b-fab42645b7b8" class=""><strong>Phần 1: Xác thực (Authentication)</strong></h3><p id="fc6edd1d-855a-4803-88f1-1461ade1d458" class="">Các endpoint này quản lý việc đăng ký, đăng nhập và các hoạt động liên quan đến tài khoản người dùng.</p><h3 id="96a4b457-7029-4822-915b-ae9f1ac4db48" class=""><strong>1.1. Đăng ký tài khoản mới</strong></h3><p id="bc11e8b3-25b1-455f-b092-9bb9f20c848e" class="">Tạo một tài khoản người dùng (customer) mới trong hệ thống.</p><ul id="f96a5018-45b2-4aaf-8597-2e29f2d8f0cd" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>POST /auth/register</code></li></ul><ul id="78ff08b3-46a3-44d3-974e-50b60c394a20" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Public</code></li></ul><ul id="0937cabf-4596-4844-ae5e-3488a21c7306" class="bulleted-list"><li style="list-style-type:disc"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f683c931-944a-478e-8ae0-9694bcf7a9cf" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;fullName&quot;: &quot;Trần Văn An&quot;,
+  &quot;email&quot;: &quot;an.tran@example.com&quot;,
+  &quot;password&quot;: &quot;Password123!&quot;
+}
+
+
+</code></pre><table id="28b9067f-7b4d-47b2-a0cc-0d0e3bf0f3cd" class="simple-table"><thead class="simple-table-header"><tr id="56186c6e-1ecf-41df-9c4b-9549590e5f45"><th id="tiMH" class="simple-table-header-color simple-table-header">Field</th><th id="I{d;" class="simple-table-header-color simple-table-header">Type</th><th id="Sp&lt;Z" class="simple-table-header-color simple-table-header">Description</th><th id="\HFq" class="simple-table-header-color simple-table-header">Constraints</th></tr></thead><tbody><tr id="08669186-ab68-4aa6-9343-845f51dc9f78"><td id="tiMH" class=""><code>fullName</code></td><td id="I{d;" class="">string</td><td id="Sp&lt;Z" class="">Họ và tên người dùng.</td><td id="\HFq" class="">Bắt buộc</td></tr><tr id="72fc8017-c730-4f8e-8da7-d14dc4539cd2"><td id="tiMH" class=""><code>email</code></td><td id="I{d;" class="">string</td><td id="Sp&lt;Z" class="">Địa chỉ email.</td><td id="\HFq" class="">Bắt buộc, duy nhất</td></tr><tr id="e16e5672-37b7-494f-b2e1-4af4c01c263a"><td id="tiMH" class=""><code>password</code></td><td id="I{d;" class="">string</td><td id="Sp&lt;Z" class="">Mật khẩu.</td><td id="\HFq" class="">Bắt buộc, tối thiểu 8 ký tự, có chữ hoa, chữ thường và số</td></tr></tbody></table></li></ul><ul id="150c63c5-fe24-4f06-9164-767495d8b8ae" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (201 Created):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="9d0e4089-3e72-4cad-941e-67cee9c06801" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Đăng ký tài khoản thành công.&quot;,
+  &quot;data&quot;: {
+    &quot;accessToken&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...&quot;,
+    &quot;user&quot;: {
+      &quot;id&quot;: 1,
+      &quot;fullName&quot;: &quot;Trần Văn An&quot;,
+      &quot;email&quot;: &quot;an.tran@example.com&quot;,
+      &quot;role&quot;: &quot;customer&quot;
+    }
+  }
+}
+
+
+</code></pre></li></ul><ul id="ce7455cf-1cc0-4251-8ad0-458c9357b70c" class="bulleted-list"><li style="list-style-type:disc"><strong>Error Responses:</strong><ul id="00b26be9-af26-401a-8a9b-b77d4f3955ab" class="bulleted-list"><li style="list-style-type:circle"><code>400 Bad Request</code>: Dữ liệu đầu vào không hợp lệ.</li></ul><ul id="eb6aceec-6576-47f9-aadf-cad2389fde54" class="bulleted-list"><li style="list-style-type:circle"><code>409 Conflict</code>: Email đã tồn tại trong hệ thống.</li></ul></li></ul><h3 id="84a9aa1e-20ad-4094-ba28-3173120cadcf" class=""><strong>1.2. Đăng nhập</strong></h3><p id="43d4b12a-531c-44c7-b4c6-aa2069467e55" class="">Xác thực thông tin người dùng và trả về một JSON Web Token (JWT) để sử dụng cho các yêu cầu sau.</p><ul id="d89f6e7d-82d5-4962-a8b8-0a55c84c27be" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>POST /auth/login</code></li></ul><ul id="463ce8b9-a99b-4a21-b8b4-01280c19198f" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Public</code></li></ul><ul id="7e2748fb-8e4c-4cdb-bfca-84fe5950d269" class="bulleted-list"><li style="list-style-type:disc"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ccca073a-c14b-4cf2-80fc-3b6e1b849d0f" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;email&quot;: &quot;an.tran@example.com&quot;,
+  &quot;password&quot;: &quot;Password123!&quot;
+}
+
+
+</code></pre></li></ul><ul id="9033ab3e-e03a-4298-a5fe-3269fda3bc03" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><ul id="15af91c6-9c20-484e-89a3-1018e1121e80" class="bulleted-list"><li style="list-style-type:circle">Cấu trúc response tương tự như khi đăng ký thành công, chứa <code>accessToken</code> và thông tin <code>user</code>.</li></ul></li></ul><ul id="f4699c41-3cef-436b-9ce4-c14e80bc7c96" class="bulleted-list"><li style="list-style-type:disc"><strong>Error Responses:</strong><ul id="3279ccac-865f-43c8-a17c-3d4516e18f8e" class="bulleted-list"><li style="list-style-type:circle"><code>401 Unauthorized</code>: Email hoặc mật khẩu không chính xác.</li></ul><ul id="7d85043f-6c2b-40a8-a53e-ddd6bde1c869" class="bulleted-list"><li style="list-style-type:circle"><code>429 Too Many Requests</code>: Tài khoản bị tạm khóa do đăng nhập sai quá nhiều lần.</li></ul></li></ul><hr id="38050a49-712d-4da5-866f-32235d831981"/><h3 id="cb3fc19d-5046-45f8-b28b-a7af17f55be7" class=""><strong>Phần 2: Người dùng (User Management)</strong></h3><p id="a1ef49ba-cb86-480b-ba94-ea28c2a5d0c1" class="">Các endpoint để quản lý thông tin cá nhân của người dùng đã đăng nhập.</p><p id="1ea8dace-a895-45f6-8ecc-63734365507e" class=""><strong>Lưu ý:</strong> Tất cả các endpoint trong mục này yêu cầu xác thực.</p><h3 id="11fd251a-df1f-459c-bfe9-18e9c4495a8f" class=""><strong>2.1. Lấy thông tin người dùng hiện tại</strong></h3><p id="65c30d5f-9a93-4a9d-b316-43dea6a66301" class="">Lấy thông tin chi tiết của người dùng đang đăng nhập.</p><ul id="e542c966-36d8-4057-b703-7025e4fe8251" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>GET /user/me</code></li></ul><ul id="17fb6f53-ad4b-4225-9c1d-7da9032c4762" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="89c33c97-c7ff-4330-96d7-99f2597e5821" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a6b827f8-8c1e-4013-8e4a-1f3ad4f62f94" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Lấy thông tin người dùng thành công.&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: 1,
+    &quot;fullName&quot;: &quot;Trần Văn An&quot;,
+    &quot;email&quot;: &quot;an.tran@example.com&quot;,
+    &quot;phoneNumber&quot;: &quot;0987654321&quot;,
+    &quot;role&quot;: &quot;customer&quot;,
+    &quot;status&quot;: &quot;active&quot;,
+    &quot;createdAt&quot;: &quot;2025-09-21T10:00:00Z&quot;
+  }
+}
+
+
+</code></pre></li></ul><h3 id="2b2bf64e-2b0c-4069-b2e5-9a0f0f03924c" class=""><strong>2.2. Cập nhật thông tin cá nhân</strong></h3><p id="12250ca9-668d-4047-938b-c6ed259582ff" class="">Cập nhật họ tên và số điện thoại của người dùng.</p><ul id="6c0d9644-e9a5-424f-8446-cbc300aec3d2" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>PUT /user/me</code></li></ul><ul id="e03c9b2b-e8eb-4927-a485-528f1bb48bbf" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="4ea64146-5b43-4a13-8e98-458847ab8211" class="bulleted-list"><li style="list-style-type:disc"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="5888d9a2-25b3-4064-952d-001d596ac4f2" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;fullName&quot;: &quot;Trần Văn An Mới&quot;,
+  &quot;phoneNumber&quot;: &quot;0123456789&quot;
+}
+
+
+</code></pre></li></ul><ul id="b296badb-984a-463a-a1a3-8b28c0fe1b2d" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><ul id="107b02cc-8411-4e50-bda5-4c5e9c06c04e" class="bulleted-list"><li style="list-style-type:circle">Trả về đối tượng người dùng đã được cập nhật (tương tự 2.1).</li></ul></li></ul><h3 id="7e7af34f-2b0d-4739-a6b0-527db65a0815" class=""><strong>2.3. Thay đổi mật khẩu</strong></h3><p id="84b69455-c6c8-4b85-a380-da79dc2ae10c" class="">Thay đổi mật khẩu của người dùng đã đăng nhập.</p><ul id="8396f162-c333-486a-9579-52f4890f31c0" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>PUT /user/change-password</code></li></ul><ul id="65952c64-827f-4e67-8cda-d5e3ec3fc791" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="17fdf215-e473-43dd-8a9d-a7fc6b646949" class="bulleted-list"><li style="list-style-type:disc"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="92f67770-9e67-482f-9185-97da8e60de0a" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;currentPassword&quot;: &quot;Password123!&quot;,
+  &quot;newPassword&quot;: &quot;NewPassword456!&quot;
+}
+
+
+</code></pre><table id="24f319a9-f122-4aa2-97c1-bbe54664bfaa" class="simple-table"><thead class="simple-table-header"><tr id="d789de53-ce7a-4a74-b954-8f362c52ba4e"><th id="|?XL" class="simple-table-header-color simple-table-header">Field</th><th id="no&gt;F" class="simple-table-header-color simple-table-header">Type</th><th id="}x~s" class="simple-table-header-color simple-table-header">Description</th><th id="DdbE" class="simple-table-header-color simple-table-header">Constraints</th></tr></thead><tbody><tr id="cfdfd157-6938-4a56-b950-07e35d2cfc80"><td id="|?XL" class=""><code>currentPassword</code></td><td id="no&gt;F" class="">string</td><td id="}x~s" class="">Mật khẩu hiện tại.</td><td id="DdbE" class="">Bắt buộc</td></tr><tr id="544163e8-4576-48ac-93b0-f4e8bd600a5e"><td id="|?XL" class=""><code>newPassword</code></td><td id="no&gt;F" class="">string</td><td id="}x~s" class="">Mật khẩu mới.</td><td id="DdbE" class="">Bắt buộc, tối thiểu 8 ký tự, có chữ hoa, chữ thường và số</td></tr></tbody></table></li></ul><ul id="d0eaae48-2570-4c8a-8227-e2f30e3c5ec7" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="bcd1af40-4533-46cf-995e-6060e8369d89" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Thay đổi mật khẩu thành công.&quot;,
+  &quot;data&quot;: null
+}
+
+
+</code></pre></li></ul><ul id="8115fe10-1a2e-4919-b77d-477b5978a77c" class="bulleted-list"><li style="list-style-type:disc"><strong>Error Responses:</strong><ul id="698583e5-0e3b-414c-ad0d-20795a27bd44" class="bulleted-list"><li style="list-style-type:circle"><code>400 Bad Request</code>: Mật khẩu hiện tại không chính xác.</li></ul><ul id="24e07cd9-9c43-40e3-a73d-84dd9fce1523" class="bulleted-list"><li style="list-style-type:circle"><code>422 Unprocessable Entity</code>: Mật khẩu mới không đáp ứng yêu cầu bảo mật.</li></ul></li></ul><h3 id="49e044df-ff60-4f0e-bebf-d355ba6b9b1c" class=""><strong>2.4. Lấy danh sách địa chỉ</strong></h3><p id="fd34552c-1d87-4df4-b99a-43b89866bd79" class="">Lấy tất cả địa chỉ giao hàng đã lưu của người dùng.</p><ul id="2c3a7a97-8ea3-48b1-882f-a2c468812f8a" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>GET /user/addresses</code></li></ul><ul id="bd53c49e-d84e-4d04-b56c-f9b5b276655b" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="b4df46db-5809-427d-a28f-887f89d6e1b1" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4a9e9cd6-d877-4c19-a131-5aa7b6402740" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Lấy danh sách địa chỉ thành công.&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;recipientName&quot;: &quot;Trần Văn An&quot;,
+      &quot;phoneNumber&quot;: &quot;0987654321&quot;,
+      &quot;streetAddress&quot;: &quot;123 Đường ABC, Phường XYZ&quot;,
+      &quot;city&quot;: &quot;Thành phố Hồ Chí Minh&quot;,
+      &quot;isDefault&quot;: true
+    }
+  ]
+}
+
+
+</code></pre></li></ul><h3 id="eec80c2f-1145-456d-bcab-bf1e27602229" class=""><strong>2.5. Thêm địa chỉ mới</strong></h3><p id="8373cb51-1ae7-40a9-a838-7c5b739ca03a" class="">Thêm một địa chỉ giao hàng mới cho người dùng.</p><ul id="eb62ceb4-bfe8-43e1-97b4-dfd9dccdb950" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>POST /user/addresses</code></li></ul><ul id="651556fc-3152-461f-aa90-2c7f28ee67b6" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="569dcee1-64fb-4614-84af-96b1bffca3fd" class="bulleted-list"><li style="list-style-type:disc"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0b61c711-9ba3-4a5a-b8f9-1ef2c88905c9" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;recipientName&quot;: &quot;Người nhận B&quot;,
+  &quot;phoneNumber&quot;: &quot;0909090909&quot;,
+  &quot;streetAddress&quot;: &quot;456 Đường DEF, Phường UVW&quot;,
+  &quot;city&quot;: &quot;Thành phố Hà Nội&quot;,
+  &quot;isDefault&quot;: false
+}
+
+
+</code></pre></li></ul><ul id="eab3af13-dd55-4912-be4f-fe97012a1609" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (201 Created):</strong><ul id="f9055190-5ab3-4c42-9abe-bd0a36c0e0cb" class="bulleted-list"><li style="list-style-type:circle">Trả về đối tượng địa chỉ vừa được tạo.</li></ul></li></ul><h3 id="55414c19-ecb5-418f-82f6-5f18829af346" class=""><strong>2.6. Cập nhật địa chỉ</strong></h3><p id="9be89f8d-8a0b-4d73-895d-96d173f3d40e" class="">Cập nhật thông tin một địa chỉ đã có.</p><ul id="19270f47-401b-411b-a681-156a2a1e4b5b" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>PUT /user/addresses/{addressId}</code></li></ul><ul id="4236c804-44bd-4a98-978e-2855019ae551" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="5c867f82-8cea-4c0e-91ce-2d138739aa64" class="bulleted-list"><li style="list-style-type:disc"><strong>Path Parameters:</strong><table id="1c03993f-6c51-4e3d-ab55-9181a7b7339c" class="simple-table"><thead class="simple-table-header"><tr id="f647f044-1c8e-4fef-abf8-208672b840cc"><th id="G_WB" class="simple-table-header-color simple-table-header">Parameter</th><th id="`aJV" class="simple-table-header-color simple-table-header">Type</th><th id="irDr" class="simple-table-header-color simple-table-header">Description</th></tr></thead><tbody><tr id="7b757a7c-4fd4-4fef-af6d-bc55f4854667"><td id="G_WB" class=""><code>addressId</code></td><td id="`aJV" class="">number</td><td id="irDr" class="">ID của địa chỉ cần cập nhật.</td></tr></tbody></table></li></ul><ul id="ed7586c0-2113-4a4e-861c-ac39ed25ff7b" class="bulleted-list"><li style="list-style-type:disc"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="9a252001-dbfa-45ab-8fa8-4e9ecf7f55f5" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;recipientName&quot;: &quot;Người nhận C&quot;,
+  &quot;phoneNumber&quot;: &quot;0911111111&quot;,
+  &quot;streetAddress&quot;: &quot;789 Đường GHI, Phường KLM&quot;,
+  &quot;city&quot;: &quot;Thành phố Đà Nẵng&quot;,
+  &quot;isDefault&quot;: true
+}
+
+
+</code></pre></li></ul><ul id="e129f5d7-0b86-4ea9-b249-8c66788e5576" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><ul id="b3f88efb-3222-41a7-bb8d-52892816c0b7" class="bulleted-list"><li style="list-style-type:circle">Trả về đối tượng địa chỉ đã được cập nhật.</li></ul></li></ul><ul id="98cb3159-fd26-47be-9142-184c5a43ca62" class="bulleted-list"><li style="list-style-type:disc"><strong>Error Response:</strong><ul id="ac390fc3-c46d-4302-bcfd-b02b75aa536b" class="bulleted-list"><li style="list-style-type:circle"><code>404 Not Found</code>: Không tìm thấy địa chỉ với ID đã cho.</li></ul></li></ul><h3 id="f820936f-e618-420d-8f49-31a3f6fabaef" class=""><strong>2.7. Xóa địa chỉ</strong></h3><p id="2ea6bbf0-67d4-427b-b0e9-95675367d3c2" class="">Xóa một địa chỉ khỏi danh sách địa chỉ của người dùng.</p><ul id="e7f81832-f4f0-44a4-a9ca-a611f8d82e60" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>DELETE /user/addresses/{addressId}</code></li></ul><ul id="c93cbfd4-a060-4c18-ba76-db6c62c8e041" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="84f2eeea-51b2-4c40-85b9-3cf38df42b24" class="bulleted-list"><li style="list-style-type:disc"><strong>Path Parameters:</strong><table id="5455e434-7e10-4254-bbb3-bd138b5d14e6" class="simple-table"><thead class="simple-table-header"><tr id="e7d93e20-fb62-455f-b039-7ec83ca300c6"><th id="{}HI" class="simple-table-header-color simple-table-header">Parameter</th><th id="E&gt;fH" class="simple-table-header-color simple-table-header">Type</th><th id="fHD:" class="simple-table-header-color simple-table-header">Description</th></tr></thead><tbody><tr id="ad716e47-0f54-4a98-bac1-c03b1b3d07f4"><td id="{}HI" class=""><code>addressId</code></td><td id="E&gt;fH" class="">number</td><td id="fHD:" class="">ID của địa chỉ cần xóa.</td></tr></tbody></table></li></ul><ul id="e1dd42c3-3d7a-4455-99e7-d3d6424495c9" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a379de76-443d-4b53-8b06-f99ac1cf519f" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Xóa địa chỉ thành công.&quot;,
+  &quot;data&quot;: null
+}
+
+
+</code></pre></li></ul><ul id="dac51276-6734-4b74-9f9c-6c6e6179278f" class="bulleted-list"><li style="list-style-type:disc"><strong>Error Response:</strong><ul id="fde8c8df-b003-41e9-b9bb-df828cc40394" class="bulleted-list"><li style="list-style-type:circle"><code>404 Not Found</code>: Không tìm thấy địa chỉ với ID đã cho.</li></ul><ul id="41b67ffb-fec0-468c-9e2b-c38ed6ae6b10" class="bulleted-list"><li style="list-style-type:circle"><code>400 Bad Request</code>: Không thể xóa địa chỉ mặc định.</li></ul></li></ul><hr id="5606a887-7c0a-41b2-b5f7-60a6c9fd33b9"/><h3 id="d9f2d782-b830-4691-acfd-d084ddef36e4" class=""><strong>Phần 3: Danh mục &amp; Thương hiệu (Categories &amp; Brands)</strong></h3><p id="2ac340d3-fec7-4908-a393-de282899746a" class="">Các endpoint này dùng để lấy thông tin về danh mục và thương hiệu sản phẩm.</p><h3 id="d92ed066-cc1c-476f-825a-daeb334d0f6f" class=""><strong>3.1. Lấy tất cả danh mục</strong></h3><p id="7f1ff6ad-8b38-4b4f-843e-855a54ad4f59" class="">Lấy danh sách tất cả các danh mục sản phẩm đang có trên hệ thống.</p><ul id="fe9c8942-7551-4c0e-924a-8f5749e83b6a" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>GET /categories</code></li></ul><ul id="acfe4983-f55f-40b2-bcf7-55627691066e" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Public</code></li></ul><ul id="b6271be9-e156-41fe-b978-9a048b7c49f3" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e46fd347-d73b-48cc-a46c-eea0bf809a82" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Lấy danh sách danh mục thành công.&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;Điện thoại&quot;,
+      &quot;parentId&quot;: null
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;name&quot;: &quot;iPhone&quot;,
+      &quot;parentId&quot;: 1
+    }
+  ]
+}
+
+
+</code></pre></li></ul><h3 id="c943e6a3-e3d1-4faf-99e2-4c50b6021975" class=""><strong>3.2. Lấy tất cả thương hiệu</strong></h3><p id="1ef5e00d-9cbf-477c-b3cb-6cb34a10a0ff" class="">Lấy danh sách tất cả các thương hiệu đang có trên hệ thống.</p><ul id="124cf4d3-40d3-4ad1-9d92-1a21649ee694" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>GET /brands</code></li></ul><ul id="51918dc6-7014-4ef4-8ff2-d62446868aab" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Public</code></li></ul><ul id="a646a391-4c2d-4c30-9d8c-9d636b6d9a50" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="84140a0b-253a-43d4-945b-efe85ba69123" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Lấy danh sách thương hiệu thành công.&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;Apple&quot;
+    },
+    {
+      &quot;id&quot;: 2,
+      &quot;name&quot;: &quot;Samsung&quot;
+    }
+  ]
+}
+
+
+</code></pre></li></ul><hr id="49a1ec41-049c-4055-8fa5-ff18429d5b3e"/><h3 id="b496b184-bd6f-4b0c-839f-0c6c12104d07" class=""><strong>Phần 4: Sản phẩm (Products)</strong></h3><p id="0e3e57fa-701e-4640-9730-fdaad7a5ccd8" class="">Các endpoint công khai để khách hàng duyệt, tìm kiếm và xem chi tiết sản phẩm.</p><h3 id="c07a7116-9c25-4f81-918f-e644a5dbcb64" class=""><strong>4.1. Lấy danh sách sản phẩm (có phân trang, lọc, sắp xếp)</strong></h3><p id="d99aeaa2-76d0-475a-a571-4aa71203bc3a" class="">Lấy danh sách các sản phẩm. Endpoint này hỗ trợ nhiều tham số truy vấn để tùy chỉnh kết quả.</p><ul id="b0540c50-3eb6-48f0-9634-6e72e4a01864" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>GET /products</code></li></ul><ul id="a0de33ef-ac3d-4cb6-89e2-75ef8cc633a3" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Public</code></li></ul><ul id="8a3276c1-2d65-475d-940a-46f9a917390b" class="bulleted-list"><li style="list-style-type:disc"><strong>Query Parameters:</strong><table id="ba6601da-b94a-4c1e-8f92-9ec4b772dedc" class="simple-table"><thead class="simple-table-header"><tr id="8737b0dd-a29b-4dd6-8acc-c74c560ffcf4"><th id="Sx}p" class="simple-table-header-color simple-table-header">Parameter</th><th id="USMb" class="simple-table-header-color simple-table-header">Type</th><th id="vsPt" class="simple-table-header-color simple-table-header">Description</th><th id="zw?N" class="simple-table-header-color simple-table-header">Example</th></tr></thead><tbody><tr id="06bcd945-be9a-45ca-a9a2-176ee3b6851f"><td id="Sx}p" class=""><code>page</code></td><td id="USMb" class="">number</td><td id="vsPt" class="">Số trang, bắt đầu từ 1. Mặc định: <code>1</code>.</td><td id="zw?N" class=""><code>page=2</code></td></tr><tr id="e679f63d-febb-42c2-9a12-c2d3e6dd2f9d"><td id="Sx}p" class=""><code>limit</code></td><td id="USMb" class="">number</td><td id="vsPt" class="">Số lượng sản phẩm trên mỗi trang. Mặc định: <code>12</code>.</td><td id="zw?N" class=""><code>limit=20</code></td></tr><tr id="4ed41543-1a6a-4827-94a9-8426b5d56769"><td id="Sx}p" class=""><code>categoryId</code></td><td id="USMb" class="">number</td><td id="vsPt" class="">Lọc sản phẩm theo ID danh mục.</td><td id="zw?N" class=""><code>categoryId=2</code></td></tr><tr id="34eadf9e-90c9-45d5-b3d8-4042981dbf53"><td id="Sx}p" class=""><code>brandId</code></td><td id="USMb" class="">number</td><td id="vsPt" class="">Lọc sản phẩm theo ID thương hiệu.</td><td id="zw?N" class=""><code>brandId=1</code></td></tr><tr id="f4b3fc44-dd62-423c-8a75-6fb8f91853af"><td id="Sx}p" class=""><code>minPrice</code></td><td id="USMb" class="">number</td><td id="vsPt" class="">Lọc sản phẩm có giá lớn hơn hoặc bằng.</td><td id="zw?N" class=""><code>minPrice=15000000</code></td></tr><tr id="7438abb0-d709-43d2-b63e-4c0c7ce1cf54"><td id="Sx}p" class=""><code>maxPrice</code></td><td id="USMb" class="">number</td><td id="vsPt" class="">Lọc sản phẩm có giá nhỏ hơn hoặc bằng.</td><td id="zw?N" class=""><code>maxPrice=25000000</code></td></tr><tr id="f49f532d-40ee-4ca3-b13b-1a2c2163ae0c"><td id="Sx}p" class=""><code>sortBy</code></td><td id="USMb" class="">string</td><td id="vsPt" class="">Sắp xếp kết quả. Cú pháp: <code>field:direction</code>. Mặc định: <code>createdAt:desc</code>.</td><td id="zw?N" class=""><code>sortBy=price:asc</code></td></tr><tr id="120ec40c-62e0-425f-9316-9b43c8e34502"><td id="Sx}p" class=""><code>keyword</code></td><td id="USMb" class="">string</td><td id="vsPt" class="">Tìm kiếm sản phẩm theo tên.</td><td id="zw?N" class=""><code>keyword=iPhone 15</code></td></tr></tbody></table></li></ul><ul id="37e2ef48-5018-4cc6-a0e0-0c1ceea5f01a" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3b9b1e26-2714-40f8-9439-958d4ad4dc39" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Lấy danh sách sản phẩm thành công.&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 101,
+      &quot;name&quot;: &quot;iPhone 15 Pro Max 256GB&quot;,
+      &quot;price&quot;: &quot;32000000.00&quot;,
+      &quot;thumbnailUrl&quot;: &quot;/images/iphone-15-pro-max.jpg&quot;,
+      &quot;status&quot;: &quot;active&quot;
+    }
+  ],
+  &quot;metadata&quot;: {
+    &quot;pagination&quot;: {
+      &quot;page&quot;: 1,
+      &quot;limit&quot;: 12,
+      &quot;totalItems&quot;: 50,
+      &quot;totalPages&quot;: 5
+    }
+  }
+}
+
+
+</code></pre></li></ul><h3 id="71e4729d-d2d4-4190-91a8-b3a71092859c" class=""><strong>4.2. Lấy chi tiết một sản phẩm</strong></h3><p id="584aead7-cf8f-48ce-9f44-2dfce3931913" class="">Lấy thông tin đầy đủ của một sản phẩm dựa trên ID.</p><ul id="90620539-e918-454b-817f-ca47ba4f9da3" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>GET /products/{productId}</code></li></ul><ul id="1cc2e8d9-6c52-490b-9c08-fc73c14ad929" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Public</code></li></ul><ul id="f8f5c4ab-9941-45bf-92cd-3965e9aecf0d" class="bulleted-list"><li style="list-style-type:disc"><strong>Path Parameters:</strong><table id="571a247a-544d-48e2-baeb-040e187391f1" class="simple-table"><thead class="simple-table-header"><tr id="f1265b19-c7b8-4761-bb42-9f3fc08f154b"><th id="d_Gu" class="simple-table-header-color simple-table-header">Parameter</th><th id="qfeV" class="simple-table-header-color simple-table-header">Type</th><th id="P@rM" class="simple-table-header-color simple-table-header">Description</th></tr></thead><tbody><tr id="9bcbe3b6-042e-4362-baa1-6b0ec1e2737c"><td id="d_Gu" class=""><code>productId</code></td><td id="qfeV" class="">number</td><td id="P@rM" class="">ID của sản phẩm cần lấy.</td></tr></tbody></table></li></ul><ul id="89982d18-aee2-4bb3-b2ea-3d6e584c5efe" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="3361a0a9-b312-4b44-8469-dd6c73148bf8" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Lấy chi tiết sản phẩm thành công.&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: 101,
+    &quot;name&quot;: &quot;iPhone 15 Pro Max 256GB&quot;,
+    &quot;description&quot;: &quot;Mô tả chi tiết về sản phẩm...&quot;,
+    &quot;price&quot;: &quot;32000000.00&quot;,
+    &quot;stockQuantity&quot;: 50,
+    &quot;status&quot;: &quot;active&quot;,
+    &quot;specifications&quot;: {
+      &quot;screen&quot;: &quot;6.7 inch - Super Retina XDR&quot;,
+      &quot;ram&quot;: &quot;8 GB&quot;,
+      &quot;storage&quot;: &quot;256 GB&quot;
+    },
+    &quot;category&quot;: { &quot;id&quot;: 2, &quot;name&quot;: &quot;iPhone&quot; },
+    &quot;brand&quot;: { &quot;id&quot;: 1, &quot;name&quot;: &quot;Apple&quot; },
+    &quot;images&quot;: [
+      { &quot;id&quot;: 201, &quot;imageUrl&quot;: &quot;/images/iphone-15-pro-max-1.jpg&quot;, &quot;isThumbnail&quot;: true },
+      { &quot;id&quot;: 202, &quot;imageUrl&quot;: &quot;/images/iphone-15-pro-max-2.jpg&quot;, &quot;isThumbnail&quot;: false }
+    ]
+  }
+}
+
+
+</code></pre></li></ul><ul id="296564a6-631d-4dcd-92ea-3778c4086238" class="bulleted-list"><li style="list-style-type:disc"><strong>Error Response:</strong><ul id="7ce7af52-40c7-46f9-b3f0-7c769f672f90" class="bulleted-list"><li style="list-style-type:circle"><code>404 Not Found</code>: Không tìm thấy sản phẩm với ID đã cho.</li></ul></li></ul><h3 id="e7f5ad20-9eac-490b-8441-139cbdfe97d3" class=""><strong>4.3. Lấy các bài đánh giá của một sản phẩm</strong></h3><p id="67cc0430-d039-464e-83b9-94229d99237c" class="">Lấy danh sách các bài đánh giá (reviews) cho một sản phẩm cụ thể.</p><ul id="6609683d-87b8-4286-9e69-bd9593ef9756" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>GET /products/{productId}/reviews</code></li></ul><ul id="69887edf-8be6-4e8e-8138-c99fcdbc6cf2" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Public</code></li></ul><ul id="9fcb7fa4-6b03-4e44-912a-2e67ddb9c130" class="bulleted-list"><li style="list-style-type:disc"><strong>Query Parameters:</strong><table id="23f25bb8-d6ec-44a4-8f52-34b90ef121fe" class="simple-table"><thead class="simple-table-header"><tr id="51fc8efa-7ced-4ceb-b79e-f605d973fa09"><th id="sfE&gt;" class="simple-table-header-color simple-table-header">Parameter</th><th id="lY\J" class="simple-table-header-color simple-table-header">Type</th><th id="YgGq" class="simple-table-header-color simple-table-header">Description</th></tr></thead><tbody><tr id="9025cf2e-8446-41a6-8049-307f5ae11f30"><td id="sfE&gt;" class=""><code>page</code></td><td id="lY\J" class="">number</td><td id="YgGq" class="">Số trang. Mặc định: <code>1</code>.</td></tr><tr id="4b3e43d9-8bfb-42a9-a08f-4a7ddef331c8"><td id="sfE&gt;" class=""><code>limit</code></td><td id="lY\J" class="">number</td><td id="YgGq" class="">Số lượng đánh giá trên trang. Mặc định: <code>5</code>.</td></tr></tbody></table></li></ul><ul id="244ad78d-00d4-48a1-9385-2573bbe0ec21" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="6d8463bb-48d2-42a7-8ec7-d433747a1e9b" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Lấy danh sách đánh giá thành công.&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 301,
+      &quot;rating&quot;: 5,
+      &quot;comment&quot;: &quot;Sản phẩm tuyệt vời!&quot;,
+      &quot;user&quot;: {
+        &quot;fullName&quot;: &quot;Nguyễn Văn B&quot;
+      },
+      &quot;likeCount&quot;: 10,
+      &quot;createdAt&quot;: &quot;2025-09-20T14:30:00Z&quot;
+    }
+  ],
+  &quot;metadata&quot;: { ... } // Cấu trúc phân trang
+}
+
+
+</code></pre></li></ul><hr id="09301bd4-952e-4ecf-89e7-ef6ab6ce24ad"/><h3 id="641a168b-07d5-4c59-929e-cf8f8100bb42" class=""><strong>Phần 5: Giỏ hàng (Shopping Cart)</strong></h3><p id="f68265f0-1fdd-4381-af4c-e8c12ca9a478" class="">Các endpoint này cho phép người dùng quản lý giỏ hàng của họ. Giỏ hàng được liên kết với người dùng đã đăng nhập.</p><p id="bd6265cb-b202-408b-a7d2-fc9061b4932b" class=""><strong>Lưu ý:</strong> Tất cả các endpoint trong mục này yêu cầu xác thực.</p><h3 id="0b68500f-612b-4d9f-a425-c862c630bb3a" class=""><strong>5.1. Lấy thông tin giỏ hàng</strong></h3><p id="0e55127b-22ee-48ef-b163-549cf7a392c1" class="">Lấy toàn bộ thông tin về giỏ hàng hiện tại của người dùng, bao gồm danh sách sản phẩm và tổng tiền.</p><ul id="3ed03926-a90f-4e4c-b690-7827e5b18247" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>GET /cart</code></li></ul><ul id="047529be-9b4f-4261-b059-9505b9bb724a" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="b9f78aa3-969a-4eb1-b688-9800380d93d8" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="92c7db18-ddab-4112-8d79-6775dd1414fe" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Lấy thông tin giỏ hàng thành công.&quot;,
+  &quot;data&quot;: {
+    &quot;items&quot;: [
+      {
+        &quot;productId&quot;: 101,
+        &quot;productName&quot;: &quot;iPhone 15 Pro Max 256GB&quot;,
+        &quot;thumbnailUrl&quot;: &quot;/images/iphone-15-pro-max.jpg&quot;,
+        &quot;price&quot;: &quot;32000000.00&quot;,
+        &quot;quantity&quot;: 1,
+        &quot;lineTotal&quot;: &quot;32000000.00&quot;
+      }
+    ],
+    &quot;totalItems&quot;: 1,
+    &quot;totalPrice&quot;: &quot;32000000.00&quot;
+  }
+}
+
+
+</code></pre></li></ul><h3 id="04d60b32-572a-4322-8da8-038171ab9e67" class=""><strong>5.2. Thêm sản phẩm vào giỏ hàng</strong></h3><p id="733fde3a-749c-4b84-b0a6-9a3ddb6116dc" class="">Thêm một sản phẩm mới vào giỏ hàng hoặc tăng số lượng nếu sản phẩm đã tồn tại.</p><ul id="65ce11a1-06fb-471e-b9b1-e3b299008470" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>POST /cart/items</code></li></ul><ul id="d86a31dc-6dcc-4865-9bf3-e3965b41fa75" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="57a75e9d-d65f-4cb6-a5a4-cbb9055aeeba" class="bulleted-list"><li style="list-style-type:disc"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d9d47881-9c61-4061-a299-621be2041136" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;productId&quot;: 102,
+  &quot;quantity&quot;: 1
+}
+
+
+</code></pre></li></ul><ul id="52ae9da0-8258-4183-8321-ddbc1ae387f4" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><ul id="b98fe686-4219-4c66-8d7f-c76346a9eeef" class="bulleted-list"><li style="list-style-type:circle">Trả về toàn bộ thông tin giỏ hàng đã được cập nhật (tương tự 5.1).</li></ul></li></ul><ul id="7d86c2fe-aa91-47d3-88d0-d5d5ad8b3359" class="bulleted-list"><li style="list-style-type:disc"><strong>Error Responses:</strong><ul id="b1926a31-46f7-46b3-b505-504213fa26dd" class="bulleted-list"><li style="list-style-type:circle"><code>400 Bad Request</code>: Số lượng yêu cầu vượt quá số lượng tồn kho.</li></ul><ul id="1389073e-d7a2-4bef-b849-c094505ff8e2" class="bulleted-list"><li style="list-style-type:circle"><code>404 Not Found</code>: Không tìm thấy sản phẩm với <code>productId</code> đã cho.</li></ul></li></ul><h3 id="05de67e0-7529-4c56-8068-3b655402dde9" class=""><strong>5.3. Cập nhật số lượng sản phẩm trong giỏ</strong></h3><p id="2ec447e8-9d09-4338-b273-2e8add7868c0" class="">Thay đổi số lượng của một sản phẩm đã có trong giỏ hàng.</p><ul id="43526644-4855-44a9-8fad-a29945b8a613" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>PUT /cart/items/{productId}</code></li></ul><ul id="d0b27ac7-de2e-40fa-a3b5-435738e1234a" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="e1b1e3b0-372e-4f6a-b46c-4af8204210b0" class="bulleted-list"><li style="list-style-type:disc"><strong>Path Parameters:</strong><table id="f71fe512-6336-4ec3-a07a-adbd601559ce" class="simple-table"><thead class="simple-table-header"><tr id="b7f1fc4e-b6bf-49d6-b03d-9cf44ddedaf8"><th id="yCX:" class="simple-table-header-color simple-table-header">Parameter</th><th id="rvPJ" class="simple-table-header-color simple-table-header">Type</th><th id="mTIn" class="simple-table-header-color simple-table-header">Description</th></tr></thead><tbody><tr id="5469a777-ca33-4e9f-97bf-5ecd5b10656d"><td id="yCX:" class=""><code>productId</code></td><td id="rvPJ" class="">number</td><td id="mTIn" class="">ID của sản phẩm cần cập nhật.</td></tr></tbody></table></li></ul><ul id="c5542f5f-222c-47a6-8927-ad44927d933d" class="bulleted-list"><li style="list-style-type:disc"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8304209e-88fb-4c26-89fe-3dac4f62c876" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;quantity&quot;: 2
+}
+
+
+</code></pre></li></ul><ul id="1c33f0bb-f3ce-4cef-a55d-4f9764aafc17" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><ul id="4bb4b059-bb08-4a0d-8ec9-541de3308f97" class="bulleted-list"><li style="list-style-type:circle">Trả về toàn bộ thông tin giỏ hàng đã được cập nhật.</li></ul></li></ul><h3 id="cc3cdb68-c967-4e37-8bd6-7f110bd57647" class=""><strong>5.4. Xóa sản phẩm khỏi giỏ hàng</strong></h3><p id="0c8dfd42-0741-4474-899d-9fae73f084a4" class="">Xóa hoàn toàn một sản phẩm ra khỏi giỏ hàng.</p><ul id="decc4d92-8a61-44f5-b76f-069eb89e8ee7" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>DELETE /cart/items/{productId}</code></li></ul><ul id="2e760740-dfd1-492a-8c52-6fb53e16f7f3" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="d4c87c05-5e7a-4283-b774-740d8c313994" class="bulleted-list"><li style="list-style-type:disc"><strong>Path Parameters:</strong><table id="d0eb720e-5d71-4021-8de8-a1a1711ead4c" class="simple-table"><thead class="simple-table-header"><tr id="54f5f0ce-0220-49ea-83cd-27ec6b5f1df6"><th id="pq]D" class="simple-table-header-color simple-table-header">Parameter</th><th id="KlMB" class="simple-table-header-color simple-table-header">Type</th><th id="tOob" class="simple-table-header-color simple-table-header">Description</th></tr></thead><tbody><tr id="ec3d2393-f08c-4449-af46-c5aa5d23f593"><td id="pq]D" class=""><code>productId</code></td><td id="KlMB" class="">number</td><td id="tOob" class="">ID của sản phẩm cần xóa.</td></tr></tbody></table></li></ul><ul id="86b8d115-e43e-439b-8ca4-a3c9d2dcf6e3" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><ul id="9a8ac5e4-9c22-4976-b6d8-13f1ddf1e613" class="bulleted-list"><li style="list-style-type:circle">Trả về toàn bộ thông tin giỏ hàng đã được cập nhật.</li></ul></li></ul><hr id="0f14cf34-0125-427e-9113-891bf9de51af"/><h3 id="563fedce-b456-4e33-ae15-8434c18313e3" class=""><strong>Phần 6: Đặt hàng (Checkout &amp; Orders)</strong></h3><p id="40cc9edd-f111-4147-af76-dfefcf60ad73" class="">Các endpoint liên quan đến quy trình thanh toán và quản lý đơn hàng.</p><h3 id="f5e3efb7-671d-4565-bf6c-8b4efcda2089" class=""><strong>6.1. Tạo đơn hàng mới (Checkout)</strong></h3><p id="45bac15f-041e-4dec-b14b-24e27f442936" class="">Tạo một đơn hàng mới từ giỏ hàng hiện tại. Endpoint này hỗ trợ cả người dùng đã đăng nhập và khách vãng lai (guest checkout).</p><ul id="77c9f0e0-884f-464e-8930-7e6b3dbdd743" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>POST /checkout</code></li></ul><ul id="265d7198-7d5c-4c92-8463-e3a158b85d7f" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Optional</code> (Nếu có token, đơn hàng sẽ được liên kết với user. Nếu không, sẽ là guest checkout).</li></ul><ul id="e22b533a-d5ca-4eba-9d14-ee884bafcb02" class="bulleted-list"><li style="list-style-type:disc"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7e42a0d0-2ab6-40ae-b0bd-032cc0e00e9e" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;shippingInfo&quot;: {
+    &quot;recipientName&quot;: &quot;Nguyễn Văn C&quot;,
+    &quot;phoneNumber&quot;: &quot;0912345678&quot;,
+    &quot;email&quot;: &quot;c.nguyen@example.com&quot;,
+    &quot;streetAddress&quot;: &quot;789 Đường GHI, Phường KLM&quot;,
+    &quot;city&quot;: &quot;Thành phố Đà Nẵng&quot;
+  },
+  &quot;voucherCode&quot;: &quot;SALE50K&quot;,
+  &quot;paymentMethod&quot;: &quot;COD&quot;
+}
+
+
+</code></pre><ul id="78d975d6-57c9-4685-a6a8-cab1ac8f0ba6" class="bulleted-list"><li style="list-style-type:circle"><strong>Lưu ý:</strong> Nếu người dùng đã đăng nhập, có thể gửi <code>addressId</code> thay cho <code>shippingInfo</code>.</li></ul></li></ul><ul id="47eedc3c-71dd-418f-baee-cdb867c984a9" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (201 Created):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2cb85d77-4b51-4243-ae13-1e03b783bb72" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Đặt hàng thành công.&quot;,
+  &quot;data&quot;: {
+    &quot;orderId&quot;: 501,
+    &quot;orderCode&quot;: &quot;UTEHUB-1695354800&quot;,
+    &quot;totalAmount&quot;: &quot;31950000.00&quot;
+  }
+}
+
+
+</code></pre></li></ul><ul id="c37fc467-f745-446c-8ae3-ade34a39f5e7" class="bulleted-list"><li style="list-style-type:disc"><strong>Error Response:</strong><ul id="a8fe1c19-04a1-44f4-9576-c0cee5c48658" class="bulleted-list"><li style="list-style-type:circle"><code>400 Bad Request</code>: Giỏ hàng trống, thông tin giao hàng không hợp lệ, hoặc mã voucher không hợp lệ.</li></ul></li></ul><h3 id="cf17849b-28dc-4517-a7d6-0b5e1d66d3e7" class=""><strong>6.2. Lấy lịch sử đơn hàng (cho người dùng đã đăng nhập)</strong></h3><ul id="b8b20863-53fc-47d9-9638-5c2660d35e4c" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>GET /orders</code></li></ul><ul id="539ba6a5-2de4-4ab9-bcda-74ae6dddf18e" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="7c6f3e6e-35fe-4b7d-ad86-3e07291ac2d0" class="bulleted-list"><li style="list-style-type:disc"><strong>Query Parameters:</strong> Hỗ trợ phân trang (<code>page</code>, <code>limit</code>).</li></ul><ul id="82e04dc7-bfaf-40f0-a2e2-04f525043ec6" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><ul id="d347eb13-a60f-4efe-845f-483a5423ecd0" class="bulleted-list"><li style="list-style-type:circle">Trả về một danh sách các đơn hàng với cấu trúc <code>OrderSummaryResponse</code> và thông tin phân trang.</li></ul></li></ul><h3 id="6879cd05-dff3-4344-9c09-ebe95475b58b" class=""><strong>6.3. Lấy chi tiết đơn hàng (cho người dùng đã đăng nhập)</strong></h3><ul id="a1935d92-95e1-46c7-b315-705baa0277e5" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>GET /orders/{orderId}</code></li></ul><ul id="e2885b37-a30b-4916-b3bb-fbbc2e1dccb5" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="ca0d5916-3923-4ffb-93a9-7b700ff3ad5b" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><ul id="20d437be-aec5-4147-9486-7da50e6301a3" class="bulleted-list"><li style="list-style-type:circle">Trả về thông tin chi tiết của đơn hàng với cấu trúc <code>OrderDetailResponse</code>.</li></ul></li></ul><h3 id="aa92cdcc-5765-40c6-908e-46347f4128f9" class=""><strong>6.4. Tra cứu đơn hàng công khai</strong></h3><p id="abb6d302-322d-4975-a34f-36efae7c3a33" class="">Cho phép bất kỳ ai (kể cả khách vãng lai) tra cứu thông tin đơn hàng bằng mã đơn hàng và email.</p><ul id="ff9f4743-dab9-4093-b066-6229c1719737" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>POST /orders/lookup</code></li></ul><ul id="40ad376d-97a2-4f24-9f77-aa925080dd6f" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Public</code></li></ul><ul id="57ce554f-a090-4ef7-912b-bd24c444bdb4" class="bulleted-list"><li style="list-style-type:disc"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7c6968d2-8a05-4471-9ce0-9cd2ff0057db" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;orderCode&quot;: &quot;UTEHUB-1695354800&quot;,
+  &quot;email&quot;: &quot;c.nguyen@example.com&quot;
+}
+
+
+</code></pre></li></ul><ul id="20103dc0-e944-470f-a93a-7c573c287704" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><ul id="2f406348-c1d0-4022-a1a2-668e3b836723" class="bulleted-list"><li style="list-style-type:circle">Trả về thông tin chi tiết của đơn hàng với cấu trúc <code>OrderDetailResponse</code>.</li></ul></li></ul><ul id="07728ccf-b72e-4193-ba05-75b331a4ae7e" class="bulleted-list"><li style="list-style-type:disc"><strong>Error Response:</strong><ul id="c4629f49-2f3c-4bb6-86fd-56ce33b74644" class="bulleted-list"><li style="list-style-type:circle"><code>404 Not Found</code>: Không tìm thấy đơn hàng khớp với thông tin đã cung cấp.</li></ul></li></ul><hr id="d0a00c36-56c5-4d3e-a838-8642bf7951f4"/><h3 id="ba12f106-e9e4-43c5-a29c-842384d9874b" class=""><strong>Phần 7: Đánh giá (Reviews)</strong></h3><p id="fb2d3b20-c1fb-4d58-a90e-51bef333de8b" class="">Các endpoint cho phép người dùng đã mua hàng có thể đánh giá sản phẩm.</p><h3 id="89f04662-6018-4b8d-aac9-35f38ed20f13" class=""><strong>7.1. Gửi đánh giá cho một sản phẩm</strong></h3><p id="e1a74760-d323-459e-b820-1ec8a1d0dead" class="">Tạo một bài đánh giá mới cho một sản phẩm. Chỉ những người dùng đã mua và đơn hàng đã hoàn thành mới có quyền thực hiện.</p><ul id="d00220f2-bcc1-4407-b54e-aebc1a9f5751" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>POST /products/{productId}/reviews</code></li></ul><ul id="5ffa2449-a9a4-4b26-bf20-c347936ceb67" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="636e8737-1793-4786-8723-56b383c51a16" class="bulleted-list"><li style="list-style-type:disc"><strong>Path Parameters:</strong><table id="e6346130-a324-4c33-ad61-ced65937479b" class="simple-table"><thead class="simple-table-header"><tr id="efe212bc-692e-4054-8873-ca8f702dfb48"><th id="jwH{" class="simple-table-header-color simple-table-header">Parameter</th><th id="sRD_" class="simple-table-header-color simple-table-header">Type</th><th id="rMjI" class="simple-table-header-color simple-table-header">Description</th></tr></thead><tbody><tr id="256dc6b6-8f59-4341-bb25-ee936ef7098d"><td id="jwH{" class=""><code>productId</code></td><td id="sRD_" class="">number</td><td id="rMjI" class="">ID của sản phẩm cần đánh giá.</td></tr></tbody></table></li></ul><ul id="6d562378-6e2d-476b-ab46-085cd7da10f2" class="bulleted-list"><li style="list-style-type:disc"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8b3cf625-32de-4429-b935-4943609d842f" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;rating&quot;: 5,
+  &quot;comment&quot;: &quot;Sản phẩm rất tốt, giao hàng nhanh.&quot;
+}
+
+
+</code></pre></li></ul><ul id="39a7355a-57d3-44f5-8a98-1f44e980c755" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (201 Created):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f8f604fd-d63a-4455-b73e-e3a79dca86f1" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Gửi đánh giá thành công.&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: 302,
+    &quot;rating&quot;: 5,
+    &quot;comment&quot;: &quot;Sản phẩm rất tốt, giao hàng nhanh.&quot;,
+    &quot;user&quot;: { &quot;fullName&quot;: &quot;Trần Văn An&quot; },
+    &quot;likeCount&quot;: 0,
+    &quot;createdAt&quot;: &quot;2025-09-25T11:00:00Z&quot;
+  }
+}
+
+
+</code></pre></li></ul><ul id="7d8c6b65-a16f-43a2-8b51-663775c200bb" class="bulleted-list"><li style="list-style-type:disc"><strong>Error Responses:</strong><ul id="b0e85666-f125-4eba-9308-2818e1085669" class="bulleted-list"><li style="list-style-type:circle"><code>403 Forbidden</code>: Người dùng chưa mua sản phẩm này hoặc đơn hàng chưa hoàn thành.</li></ul><ul id="fc65a2ca-fa8f-4a78-b21b-b78bdefb1555" class="bulleted-list"><li style="list-style-type:circle"><code>409 Conflict</code>: Người dùng đã đánh giá sản phẩm này trước đó.</li></ul></li></ul><h3 id="533ad9ae-e90e-42fb-b5e9-da2e9b519030" class=""><strong>7.2. Thích một bài đánh giá</strong></h3><p id="da62bebd-da28-4f18-9425-2a2dc37dd57c" class="">Thích (Like) một bài đánh giá của người dùng khác.</p><ul id="881a2ca3-b75a-4806-a16f-02a994d042c5" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>POST /reviews/{reviewId}/like</code></li></ul><ul id="b819fb39-c497-4103-b603-3875634fc996" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="2c4295cd-cce9-4818-b5aa-2f69cc3f0eda" class="bulleted-list"><li style="list-style-type:disc"><strong>Path Parameters:</strong><table id="9ee669dd-1dc5-4421-9d16-ed9dc8461613" class="simple-table"><thead class="simple-table-header"><tr id="1afdcf72-544f-4c8e-8c0d-11029120e73a"><th id="`_q]" class="simple-table-header-color simple-table-header">Parameter</th><th id="x=uP" class="simple-table-header-color simple-table-header">Type</th><th id="NX:m" class="simple-table-header-color simple-table-header">Description</th></tr></thead><tbody><tr id="c96652b8-cc32-47d7-b3ed-764035e03c87"><td id="`_q]" class=""><code>reviewId</code></td><td id="x=uP" class="">number</td><td id="NX:m" class="">ID của bài đánh giá cần thích.</td></tr></tbody></table></li></ul><ul id="348ff743-4836-4d13-8f3d-f0bfdd5eb935" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="738b9637-f637-4af1-bdd7-c81bcf52a08c" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Thích đánh giá thành công.&quot;,
+  &quot;data&quot;: {
+    &quot;likeCount&quot;: 11
+  }
+}
+
+
+</code></pre></li></ul><ul id="81c58501-d1af-4fb0-bd3e-677edac84ea7" class="bulleted-list"><li style="list-style-type:disc"><strong>Error Response:</strong><ul id="83e52038-bcaa-45d0-82db-125d0ce50b0c" class="bulleted-list"><li style="list-style-type:circle"><code>409 Conflict</code>: Người dùng đã thích bài đánh giá này.</li></ul></li></ul><h3 id="5e42f333-8ef4-43fb-a4aa-11c8bffe0f20" class=""><strong>7.3. Bỏ thích một bài đánh giá</strong></h3><p id="7843b09f-7fcd-4d18-a762-e8280d2b1b50" class="">Hủy lượt thích (Unlike) một bài đánh giá.</p><ul id="fab3f2ca-eb4b-4cbd-a6d7-6898fab2e890" class="bulleted-list"><li style="list-style-type:disc"><strong>Endpoint:</strong> <code>DELETE /reviews/{reviewId}/like</code></li></ul><ul id="9a9eb2eb-b909-4d38-b50e-725de43c184a" class="bulleted-list"><li style="list-style-type:disc"><strong>Authentication:</strong> <code>Required</code></li></ul><ul id="db560126-75b8-4095-956b-34974a7fac0f" class="bulleted-list"><li style="list-style-type:disc"><strong>Path Parameters:</strong><table id="e6cd232b-aa8b-4dce-bc77-21d0fb2ca4e6" class="simple-table"><thead class="simple-table-header"><tr id="8518cb45-6b0b-4188-8160-0a6cd622ecec"><th id="jj;d" class="simple-table-header-color simple-table-header">Parameter</th><th id="]ES=" class="simple-table-header-color simple-table-header">Type</th><th id="usTX" class="simple-table-header-color simple-table-header">Description</th></tr></thead><tbody><tr id="f408f38f-3306-47a1-986a-64ffe3311421"><td id="jj;d" class=""><code>reviewId</code></td><td id="]ES=" class="">number</td><td id="usTX" class="">ID của bài đánh giá cần bỏ thích.</td></tr></tbody></table></li></ul><ul id="68e1042d-851d-4795-aa7e-f9999aa8920e" class="bulleted-list"><li style="list-style-type:disc"><strong>Success Response (200 OK):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="82dbc717-b57e-4ec5-bb9d-4c9b76abdd45" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Bỏ thích đánh giá thành công.&quot;,
+  &quot;data&quot;: {
+    &quot;likeCount&quot;: 10
+  }
+}
+
+
+</code></pre></li></ul><hr id="d945fdf7-b99f-4ca4-aef6-7e3e03d54df6"/><h3 id="f3d9b23d-d382-4809-8f07-50d83d12049e" class=""><strong>Phần 8: Quản trị (Admin)</strong></h3><p id="edc9d806-4892-402b-990b-f0a530729514" class="">Các endpoint này chỉ dành cho người dùng có vai trò <code>ADMIN</code>.</p><p id="a03e34df-6c78-4991-b7da-b2e00fa03c8b" class=""><strong>Lưu ý:</strong> Tất cả các endpoint trong mục này đều có tiền tố <code>/admin</code> và yêu cầu xác thực với quyền Admin.</p><h3 id="cf4669a5-6bf1-4cbe-a6c5-3aec33557b4e" class=""><strong>8.1. Quản lý Sản phẩm</strong></h3><ul id="700e8dca-3dff-4923-bd40-0c9d1a40a066" class="bulleted-list"><li style="list-style-type:disc"><code>POST /admin/products</code>: Tạo sản phẩm mới.<ul id="ad46aff7-e64c-416d-8f14-39fe448e0095" class="bulleted-list"><li style="list-style-type:circle"><strong>Request Body:</strong> <code>ProductRequest</code> DTO.</li></ul><ul id="912d4504-7970-4e0b-9127-e4818cd31e38" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>201 Created</code> với chi tiết sản phẩm vừa tạo.</li></ul></li></ul><ul id="a0b05da7-74b8-4a9a-a481-bb6ee16b0696" class="bulleted-list"><li style="list-style-type:disc"><code>PUT /admin/products/{productId}</code>: Cập nhật thông tin sản phẩm.<ul id="74817c25-0830-4ede-ae9d-d1362fd22172" class="bulleted-list"><li style="list-style-type:circle"><strong>Request Body:</strong> <code>ProductRequest</code> DTO.</li></ul><ul id="cb8dd9e9-1d9e-4092-a2c9-21ad0fc6e334" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>200 OK</code> với chi tiết sản phẩm đã cập nhật.</li></ul></li></ul><ul id="37f44275-cc02-4680-9525-5f01ac7ffb23" class="bulleted-list"><li style="list-style-type:disc"><code>DELETE /admin/products/{productId}</code>: Xóa mềm (soft-delete) sản phẩm.<ul id="0344dfd3-8b04-40f3-8b25-e1d50e354480" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>204 No Content</code>.</li></ul></li></ul><h3 id="4b7c47dd-605c-44cf-a4be-4d8dc4c92965" class=""><strong>8.2. Quản lý Đơn hàng</strong></h3><ul id="89d18c48-43eb-4725-a075-d59e8c13d9fa" class="bulleted-list"><li style="list-style-type:disc"><code>GET /admin/orders</code>: Lấy danh sách tất cả đơn hàng (có phân trang và lọc theo trạng thái).<ul id="287f1066-2351-499b-b24c-92819722c7da" class="bulleted-list"><li style="list-style-type:circle"><strong>Query Parameters:</strong> <code>page</code>, <code>limit</code>, <code>status</code>.</li></ul><ul id="04dc491c-4d3e-40ec-bc59-66e579e10001" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>200 OK</code> với danh sách đơn hàng và thông tin phân trang.</li></ul></li></ul><ul id="21c3dfdf-0c83-45bb-8d5a-5eda29b65563" class="bulleted-list"><li style="list-style-type:disc"><code>GET /admin/orders/{orderId}</code>: Lấy chi tiết một đơn hàng.<ul id="89ce41e6-6de5-435c-8e24-d27762b06f6f" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>200 OK</code> với <code>OrderDetailResponse</code>.</li></ul></li></ul><ul id="61639cba-800c-4429-8188-96b6f135897e" class="bulleted-list"><li style="list-style-type:disc"><code>PUT /admin/orders/{orderId}/status</code>: Cập nhật trạng thái của một đơn hàng.<ul id="14c99161-5523-428b-aabc-a0e3d9e50bfe" class="bulleted-list"><li style="list-style-type:circle"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="d362e1da-be9c-4c0a-89ff-b914d99d4d71" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;status&quot;: &quot;shipped&quot;
+}
+
+
+</code></pre></li></ul><ul id="dd23b1d9-206c-4aef-84e1-f70757ae445a" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>200 OK</code> với chi tiết đơn hàng đã cập nhật.</li></ul></li></ul><h3 id="e36c36d8-8b0c-4731-aeae-1d650bebef16" class=""><strong>8.3. Quản lý Người dùng</strong></h3><ul id="0879320f-a750-4bc1-b22d-61957db4bcf0" class="bulleted-list"><li style="list-style-type:disc"><code>GET /admin/users</code>: Lấy danh sách tất cả người dùng (có phân trang).<ul id="900d77b2-246b-453f-a7ab-1d64f9126cb5" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>200 OK</code> với danh sách người dùng và thông tin phân trang.</li></ul></li></ul><ul id="01997d31-45cb-49b3-8e6c-301c9bca5b58" class="bulleted-list"><li style="list-style-type:disc"><code>PUT /admin/users/{userId}/status</code>: Cập nhật trạng thái tài khoản người dùng (khóa/mở khóa).<ul id="4a60dbe2-bdde-4c15-9498-8b24dc6dc6c8" class="bulleted-list"><li style="list-style-type:circle"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="63c3f5e7-6317-4370-9bf6-cc3a36c2d00f" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;status&quot;: &quot;locked&quot;
+}
+
+
+</code></pre></li></ul><ul id="b170e2dd-bc45-4afe-a6e0-99a283cb6c77" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>200 OK</code> với thông tin người dùng đã cập nhật.</li></ul></li></ul><h3 id="65d3af68-54fe-4a12-91df-79df55e3ed9c" class=""><strong>8.4. Quản lý Mã giảm giá (Vouchers)</strong></h3><ul id="95d4e2c4-ddde-4941-8e30-ba0634aa307e" class="bulleted-list"><li style="list-style-type:disc"><code>POST /admin/vouchers</code>: Tạo một mã giảm giá mới.<ul id="8e0d0168-eb8d-4694-ab9f-7e2c6f79262d" class="bulleted-list"><li style="list-style-type:circle"><strong>Request Body:</strong> <code>VoucherRequest</code> DTO.</li></ul><ul id="1fe9e3a5-ad27-44bc-a3dd-25a20c8978ed" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>201 Created</code> với chi tiết voucher vừa tạo.</li></ul></li></ul><ul id="20347b13-1c09-49e0-9a83-5cfe70901bd5" class="bulleted-list"><li style="list-style-type:disc"><code>PUT /admin/vouchers/{voucherId}</code>: Cập nhật một mã giảm giá.<ul id="5f22435f-70dc-45ab-bbed-c1ec7566911f" class="bulleted-list"><li style="list-style-type:circle"><strong>Request Body:</strong> <code>VoucherRequest</code> DTO.</li></ul><ul id="5085cfd5-ef8e-46a7-b1f7-273dac728a5b" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>200 OK</code> với chi tiết voucher đã cập nhật.</li></ul></li></ul><ul id="977d33d2-4dee-4206-b307-ec09e3ffab06" class="bulleted-list"><li style="list-style-type:disc"><code>DELETE /admin/vouchers/{voucherId}</code>: Vô hiệu hóa một mã giảm giá.<ul id="5ec58384-ef68-40e4-a8c6-93de2e40ef25" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>204 No Content</code>.</li></ul></li></ul><h3 id="3fc2a1f7-4762-484e-9a14-e949a71def3a" class=""><strong>8.5. Dashboard &amp; Thống kê</strong></h3><ul id="1669454e-f458-45f1-99b2-d38d392aa6fb" class="bulleted-list"><li style="list-style-type:disc"><code>GET /admin/dashboard/summary</code>: Lấy thống kê tổng quan cho dashboard.<ul id="45ed437a-e8b4-4cfe-a7c0-eb22b312a831" class="bulleted-list"><li style="list-style-type:circle"><strong>Response (200 OK):</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="1af61306-3b00-4197-b962-53f84b1f590b" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Lấy thống kê dashboard thành công.&quot;,
+  &quot;data&quot;: {
+    &quot;totalRevenue&quot;: &quot;125000000.00&quot;,
+    &quot;pendingOrders&quot;: 15,
+    &quot;totalProducts&quot;: 250,
+    &quot;newCustomersToday&quot;: 8
+  }
+}
+
+
+</code></pre></li></ul></li></ul><h3 id="9abc2fd7-f438-4fea-b364-b0a896636867" class=""><strong>8.6. Quản lý Danh mục (Categories)</strong></h3><ul id="5d89ff9f-0ecc-4a6a-84e6-8b2573844c5e" class="bulleted-list"><li style="list-style-type:disc"><code>POST /admin/categories</code>: Tạo danh mục mới.<ul id="d70550da-6594-484b-b677-5aa0e4597e69" class="bulleted-list"><li style="list-style-type:circle"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="dd871366-90f1-4d48-98f0-ba0194d939ca" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;name&quot;: &quot;Điện thoại Android&quot;,
+  &quot;parentId&quot;: 1
+}
+</code></pre></li></ul><ul id="8871979f-6ead-43e4-972e-8deaa4049188" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>201 Created</code> với chi tiết danh mục vừa tạo.</li></ul></li></ul><ul id="57ff0c72-7f5f-407a-bc66-ece15d66e6c9" class="bulleted-list"><li style="list-style-type:disc"><code>PUT /admin/categories/{categoryId}</code>: Cập nhật danh mục.<ul id="0078abc6-142f-4966-a66c-5434413a91a3" class="bulleted-list"><li style="list-style-type:circle"><strong>Request Body:</strong> Tương tự như tạo mới.</li></ul><ul id="0d536446-4593-4ac0-982d-a23bec154466" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>200 OK</code> với chi tiết danh mục đã cập nhật.</li></ul></li></ul><ul id="24c4df63-6b46-4d19-af3f-8cb1c2fa6070" class="bulleted-list"><li style="list-style-type:disc"><code>DELETE /admin/categories/{categoryId}</code>: Xóa mềm danh mục.<ul id="f9014a33-1eb1-4db9-9f04-0e24e9a9d81b" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>204 No Content</code>.</li></ul></li></ul><h3 id="6c7e6555-0f8e-485f-8f1d-ba3c6c126bc2" class=""><strong>8.7. Quản lý Thương hiệu (Brands)</strong></h3><ul id="7c0218bb-4d3a-4f4a-9c87-6bbb9c79b573" class="bulleted-list"><li style="list-style-type:disc"><code>POST /admin/brands</code>: Tạo thương hiệu mới.<ul id="d0c1af97-6a44-416e-aed2-b9ec2565211b" class="bulleted-list"><li style="list-style-type:circle"><strong>Request Body:</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0f5c46d9-1aed-4315-8238-abca8e86fff6" class="code code-wrap"><code class="language-JSON" style="white-space:pre-wrap;word-break:break-all">{
+  &quot;name&quot;: &quot;Xiaomi&quot;,
+  &quot;categoryId&quot;: 2
+}
+</code></pre></li></ul><ul id="0ae31188-e52a-443e-9440-6f213bc86d05" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>201 Created</code> với chi tiết thương hiệu vừa tạo.</li></ul></li></ul><ul id="785eb330-3356-42c9-8557-138fed66e115" class="bulleted-list"><li style="list-style-type:disc"><code>PUT /admin/brands/{brandId}</code>: Cập nhật thương hiệu.<ul id="bf7b1575-5421-4084-b720-36c163cf14bd" class="bulleted-list"><li style="list-style-type:circle"><strong>Request Body:</strong> Tương tự như tạo mới.</li></ul><ul id="e387c54a-848b-4937-8b1a-40253559bd9b" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>200 OK</code> với chi tiết thương hiệu đã cập nhật.</li></ul></li></ul><ul id="671e6ab9-5b34-4bbd-995c-cd7670c6a0cc" class="bulleted-list"><li style="list-style-type:disc"><code>DELETE /admin/brands/{brandId}</code>: Xóa mềm thương hiệu.<ul id="04a78d96-d26b-49b8-a6dd-13bb12ed672c" class="bulleted-list"><li style="list-style-type:circle"><strong>Response:</strong> <code>204 No Content</code>.</li></ul></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
